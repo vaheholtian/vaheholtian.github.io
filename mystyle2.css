@@ -1,0 +1,103 @@
+body {
+    font-family: 'Cormorant', serif;
+    font-size: 24px;
+}
+
+.overlay {
+    height: 0%;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0, 0.5);
+    overflow-y: hidden;
+    transition: 0.5s;
+}
+
+.overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    text-align: center;
+    font-size: 1.4em;
+    color: #fff;
+    display: block;
+    transition: 0.3s;
+    margin: 20px 0 20px 0;
+}
+
+.overlay a:hover, .overlay a:focus {
+    color: #f6d000;
+}
+
+.closebtn {
+    position: absolute;
+    top: -45px;
+    right: 45px;
+    font-size: 120px;
+}
+
+@media screen and (max-height: 450px) {
+    .overlay {
+        overflow-y: auto;
+    }
+
+    .overlay a {
+        font-size: 20px
+    }
+
+    .overlay .closebtn {
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+    }
+}
+
+/*neeeeoooon*/
+.overlay a {
+    color: #1AB6F1;
+    cursor: none;
+}
+
+a {
+    text-decoration: none;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+.overlay a:hover {
+    -webkit-animation: neon5 1.5s ease-in-out infinite alternate;
+    -moz-animation: neon5 1.5s ease-in-out infinite alternate;
+    animation: neon5 1.5s ease-in-out infinite alternate;
+}
+
+/*glow*/
+@keyframes neon5 {
+    from {
+        text-shadow: 0 0 1px #D4F2FC, 0 0 2px #D4F2FC, 0 0 3px #D4F2FC, 0 0 4px #1AB6F1, 0 0 7px #1AB6F1, 0 0 8px #1AB6F1, 0 0 10px #1AB6F1, 0 0 15px #1AB6F1;
+    }
+
+    to {
+        text-shadow: 0 0 5px #D4F2FC, 0 0 1px #D4F2FC, 0 0 15px #D4F2FC, 0 0 2px #1AB6F1, 0 0 35px #1AB6F1, 0 0 4px #1AB6F1, 0 0 5px #1AB6F1, 0 0 75px #1AB6F1;
+    }
+}
+
+/*RESPONSIVE*/
+@media (max-width: 650px) {
+    #container {
+        width: 100%;
+    }
+
+    p {
+        font-size: 3.5em;
+    }
+}
