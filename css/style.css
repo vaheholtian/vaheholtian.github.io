@@ -12,7 +12,6 @@ html {
   overflow: hidden;
 }
 
-
 #title {
   position: absolute;
   top: 50%;
@@ -26,11 +25,22 @@ html {
   margin-top: -60px;
   padding-left: 10px;
 }
+
 #title span {
   background: -webkit-linear-gradient(white, #38495a);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+a {
+	text-decoration: none;
+}
+
+a:visited {
+	color:white;
+	text-decoration:none;
+}
+
 /*glow*/
 @keyframes neon5 {
     from {
@@ -50,7 +60,6 @@ html {
     transform: translateY(-2000px);
   }
 }
-
 
 #stars {
   width: 1px;
