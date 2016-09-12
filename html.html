@@ -33,7 +33,7 @@ x.send(null);
 
 $().ready(function () {
   $.get(url, function (data) {
-    data.responseXML.getElementsByTagName("average_rating"))[0].textContent;
+    (data.responseXML.getElementsByTagName("average_rating"))[0].textContent;
   });
 });
 </script>
