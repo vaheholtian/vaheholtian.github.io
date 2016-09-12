@@ -1,0 +1,38 @@
+<!-- 0441172717
+
+https://www.goodreads.com/book/isbn/0441172717.xml?key=LshVq66luq0OJ6RI17GRVQ -->
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>jQuery.parseXML demo</title>
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+<body>
+ 
+<p id="someElement"></p>
+<p id="anotherElement"></p>
+ 
+<script>
+/* <!-- 0441172717
+
+https://www.goodreads.com/book/isbn/0441172717.xml?key=LshVq66luq0OJ6RI17GRVQ --> */
+
+var url = "https://www.goodreads.com/book/isbn/0441172717.xml?key=LshVq66luq0OJ6RI17GRVQ"
+var x = new XMLHttpRequest();
+x.open("GET", url, true);
+x.onreadystatechange = function () {
+  if (x.readyState == 4 && x.status == 200)
+  {
+	  var vv = (x.responseXML.getElementsByTagName("average_rating"))[0].textContent;
+	  alert(vv)
+  }
+};
+x.send(null);
+
+
+</script>
+ 
+</body>
+</html>
