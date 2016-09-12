@@ -19,7 +19,7 @@ https://www.goodreads.com/book/isbn/0441172717.xml?key=LshVq66luq0OJ6RI17GRVQ --
 
 https://www.goodreads.com/book/isbn/0441172717.xml?key=LshVq66luq0OJ6RI17GRVQ --> */
 
-var url = "https://www.goodreads.com/book/isbn/0441172717.xml?key=LshVq66luq0OJ6RI17GRVQ"
+var url = "https://www.goodreads.com/book/isbn/0441172717.xml?key=LshVq66luq0OJ6RI17GRVQ&callback=?"
 var x = new XMLHttpRequest();
 x.open("GET", url, true);
 x.onreadystatechange = function () {
@@ -31,7 +31,11 @@ x.onreadystatechange = function () {
 };
 x.send(null);
 
-
+$().ready(function () {
+  $.get(url, function (data) {
+    data.responseXML.getElementsByTagName("average_rating"))[0].textContent;
+  });
+});
 </script>
  
 </body>
