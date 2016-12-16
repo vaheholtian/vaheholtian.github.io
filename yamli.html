@@ -19,7 +19,7 @@ button {font-size: 2em;margin:5px;padding-left: 0.5em;padding-right: 0.5em;}
 </style>
   </HEAD>
 <body>
-<div><input type="text" class="tb_ex" id="test" value="" dir="rtl" style="direction: rtl;" spellcheck="false" autocomplete="off"></div>
+<div><input type="text" class="tb_ex" id="test" value="" dir="rtl" style="direction: rtl;" spellcheck="false" autocomplete="off" onkeydown="search()"></div>
 <div><button onclick="copy_text()">Copy</button><button onclick="search_google()">Search Google</button></div>
 
 <!-- YAMLI CODE START -->
@@ -43,6 +43,11 @@ function search_google() {
 	baseURI = 'http://www.google.com/search?q=';
 	query = test.value.trim();
 	window.open(baseURI + query);
+}
+function search() {
+    if(event.ctrlKey && event.keyCode == 13) {
+        search_google();        
+    }
 }
 </script>
 <!-- YAMLI CODE END -->
