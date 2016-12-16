@@ -3,11 +3,26 @@
 <HTML>
   <HEAD>
     <TITLE>Yamli</TITLE>
+	<style>div.yamliapi_settingsDiv.yamliapi_inst_ff_test, div.yamliapi_menuPanel div span {
+    display: none;
+}
+
+input.tb_ex {
+    font-size: 2em;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+    max-width: 400px;
+    padding: 2px;
+    padding-right: 10px;
+    width: 100%;
+}
+
+</style>
   </HEAD>
   <BODY>
 <input type="text" class="tb_ex" id="test" value="" dir="rtl" style="direction: rtl;" spellcheck="false" autocomplete="off">
 <!-- YAMLI CODE START -->
-<script type="text/javascript" src="http://api.yamli.com/js/yamli_api.js"></script>
+<script type="text/javascript" src="https://api.yamli.com/js/yamli_api.js"></script>
 <script type="text/javascript">
   if (typeof(Yamli) == "object" && Yamli.init( { uiLanguage: "en" , startMode: "onOrUserDefault" } ))
   {
