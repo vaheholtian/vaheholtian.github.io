@@ -1,0 +1,20 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+        "http://www.w3.org/TR/html4/strict.dtd">
+<HTML>
+  <HEAD>
+    <TITLE>Yamli</TITLE>
+  </HEAD>
+  <BODY>
+<input type="text" class="tb_ex" id="test" value="" dir="rtl" style="direction: rtl;" spellcheck="false" autocomplete="off">
+<!-- YAMLI CODE START -->
+<script type="text/javascript" src="http://api.yamli.com/js/yamli_api.js"></script>
+<script type="text/javascript">
+  if (typeof(Yamli) == "object" && Yamli.init( { uiLanguage: "en" , startMode: "onOrUserDefault" } ))
+  {
+    Yamli.yamlify( "test", { settingsPlacement: "bottomLeft" } );
+  }
+</script>
+<!-- YAMLI CODE END -->
+  </BODY>
+</HTML>
+
