@@ -9,18 +9,19 @@
 
 input.tb_ex {
     font-size: 2em;
-    margin-left: 0.5em;
-    margin-right: 0.5em;
+    margin: 5px;
     max-width: 400px;
     padding: 2px;
     padding-right: 10px;
     width: 100%;
 }
-
+button {font-size: 2em;margin:5px;padding-left: 0.5em;padding-right: 0.5em;}
 </style>
   </HEAD>
-  <BODY>
-<input type="text" class="tb_ex" id="test" value="" dir="rtl" style="direction: rtl;" spellcheck="false" autocomplete="off">
+<body>
+<div><input type="text" class="tb_ex" id="test" value="" dir="rtl" style="direction: rtl;" spellcheck="false" autocomplete="off"></div>
+<div><button onclick="copy_text()">Copy</button><button onclick="search_google()">Search Google</button></div>
+
 <!-- YAMLI CODE START -->
 <script type="text/javascript" src="https://api.yamli.com/js/yamli_api.js"></script>
 <script type="text/javascript">
@@ -29,7 +30,22 @@ input.tb_ex {
     Yamli.yamlify( "test", { settingsPlacement: "bottomLeft" } );
   }
 </script>
+<script>
+function copy_text() {
+	var sel = test.selectionEnd;
+	test.select();
+	document.execCommand("copy");
+	test.selectionEnd = sel;
+	test.selectionStart = sel;
+}
+
+function search_google() {
+	baseURI = 'http://www.google.com/search?q=';
+	query = test.value.trim();
+	window.open(baseURI + query);
+}
+</script>
 <!-- YAMLI CODE END -->
-  </BODY>
+  </body>
 </HTML>
 
